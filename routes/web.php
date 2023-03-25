@@ -8,6 +8,8 @@ use App\Http\Controllers\post;
 use App\Http\Controllers\profile;
 use App\Http\Controllers\chat;
 use App\Http\Controllers\story;
+use App\Http\Controllers\admin;
+
 
 
 /*
@@ -54,5 +56,15 @@ Route::any('/setting',[index::class,'setting']);
 
 
 Route::any('/profile',[profile::class,'profile']);
+
+/* Admin */
+
+Route::any('/admin-login',[admin::class,'index']);
+Route::any('/dashboard',[admin::class,'dashboard']);
+
+Route::any('/total_post',[admin::class,'total_post']);
+
+
+
 
 
