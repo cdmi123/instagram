@@ -40,10 +40,11 @@ class admin extends Controller
                   ->whereRaw('Date(today_date) = CURDATE()')->get();
         $records = $records->count();
 
+        $user_data['user_info'] = $user;
 
         $insta_data = array('total_user' =>$cnt_user,'post'=>$cnt_post,'register'=>$records);
        
-        return view('dashboard',$insta_data);
+        return view('dashboard',$insta_data,$user_data);
     }
 
      function total_post(Request $res)

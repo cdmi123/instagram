@@ -148,6 +148,7 @@
                             <i class="fa-solid fa-sliders"></i>
                         </div>
 
+                   
                         <div class="header_search">
                             <input type="text" placeholder="Search..">
                             <div class="icon-search">
@@ -158,6 +159,7 @@
                                 </svg>
                             </div>
                         </div>
+                
 
                     </div>
                     <div class="right-side lg:pr-4">

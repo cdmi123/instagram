@@ -41,6 +41,28 @@
                             <span>
                                 <span class="block capitalize font-semibold dark:text-gray-100"
                                     style="line-height: 14px"> {{ $post_row->fname }} {{ $post_row->lname }}</span>
+                                    <h6>
+                                        <?php   
+                                                $datetime_1 = $post_row->date_time; 
+
+                                                date_default_timezone_set('Asia/Kolkata');
+                                                $date = date('Y-m-d H:i:s');
+ 
+                                                $from_time = strtotime($datetime_1); 
+                                                $to_time = strtotime($date); 
+
+                                                ceil($minutes = round(abs($from_time - $to_time) / 60,2)). " minutes"; 
+
+                                                if($minutes >= 60)
+                                                {
+                                                    echo ceil($minutes%60). " Hours";
+                                                }
+                                                else
+                                                {
+                                                    echo ceil($minutes) ." minutes ago";
+                                                }
+                                        ?>
+                                    </h6>
                                 <p class="m-0" style="font-size: 14px;">
                                 </p>
                             </span>
@@ -166,11 +188,6 @@
                         </div>
                     </div>
                     <?php } ?>
-
-
-
-
-
 
                     <div class="py-3 px-4 space-y-3">
 
